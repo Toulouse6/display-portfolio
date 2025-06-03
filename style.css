@@ -24,14 +24,26 @@
     --green: #a7c4af;
     --green-hover: #dcefdc;
     --green-glow: rgba(220, 239, 220, 0.1);
+
+    --bg-dark: #1c201e;
+    --bg-header: #272d2a;
+    --bg-section: #15281f;
+    --bg-overlay: #343b38;
+    --bg-project: #2e3733;
+    --border-project: #3a3e3c;
+    --tooltip-bg: #161c19;
+
+    --shadow-green-15: rgba(193, 244, 208, 0.15);
+    --shadow-white-30: rgba(255, 255, 255, 0.3);
 }
+
 
 html,
 body {
     max-width: 100%;
     font-family: 'Mona Sans Regular', sans-serif;
     line-height: 1.6;
-    background-color: #1c201e;
+    background-color: var(--bg-dark);
     overflow-x: hidden;
     margin: 0 auto;
     opacity: 0;
@@ -48,7 +60,7 @@ nav {
     text-transform: uppercase;
     width: 100%;
     position: fixed;
-    background-color: #272d2a;
+    background-color: var(--bg-header);
     border-bottom: 1px solid var(--green);
     z-index: 2;
 }
@@ -78,7 +90,7 @@ header {
     align-items: center;
     width: 100%;
     margin: 0.5rem 0 1.5rem 0;
-    background-color: #15281f;
+    background-color: var(--bg-section);
     overflow: hidden;
     z-index: 0;
 }
@@ -102,7 +114,7 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #343b38;
+    background-color: var(--bg-overlay);
     opacity: 0.9;
     z-index: -1;
 }
@@ -267,7 +279,7 @@ header,
     bottom: 125%;
     left: 50%;
     transform: translateX(-50%) translateY(4px);
-    background-color: #161c19;
+    background-color: var(--tooltip-bg);
     color: var(--green-hover);
     padding: 4px 10px;
     border-radius: 4px;
@@ -335,19 +347,19 @@ nav,
 .project {
     transition: opacity 0.3s ease, transform 0.3s ease;
     padding: 4%;
-    background-color: #2e3733;
+    background-color: var(--bg-project);
     border-radius: 15px;
     overflow: hidden;
-    border: 1px solid #3a3e3c;
+    border: 1px solid var(--border-project);
     opacity: 0;
-    box-shadow: 0 2px 10px rgba(193, 244, 208, 0.15);
+    box-shadow: 0 2px 10px var(--shadow-green-15);
     transform: translateY(20px);
     animation: fadeInProject 0.8s ease-in-out forwards;
 }
 
 .project:hover {
     transform: translateY(-3px);
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 10px var(--shadow-white-30);
 }
 
 .project:nth-child(1) {
@@ -489,7 +501,7 @@ footer {
     justify-content: center;
     margin: 4rem auto 0;
     color: var(--green);
-    background-color: #272d2a;
+    background-color: var(--bg-header);
     border-top: 1px solid var(--green);
     letter-spacing: 1px;
 }
