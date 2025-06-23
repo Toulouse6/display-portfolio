@@ -297,6 +297,7 @@ nav,
 }
 
 .project p {
+    margin-bottom: 0.5rem;
     line-height: 1.4;
     color: var(--green-hover);
 }
